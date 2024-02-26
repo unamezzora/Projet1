@@ -50,11 +50,6 @@ body {
     box-sizing: border-box;
 }
 
-.infogroup {
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-
 a {
     color: inherit;
     text-decoration: none;
@@ -87,6 +82,54 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
+
+/****** Infogroup ***********/
+.slogan {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.formulaire-recherche {
+    display: flex;
+    margin-bottom: 20px;
+    width: 377px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 49px;
+    width: 50px;
+    background-color: #F2F2F2;
+    --main-color: black;
+    border-radius: 15px 0 0 15px;
+}
+
+
+.localisation {
+    width: 195px;
+    border-color: #F2F2F2 transparent #F2F2F2 transparent;
+    font-weight: bold;
+    padding-left: 10px;
+    border-style: solid;
+}
+
+.boutton {
+    width: 132px;
+    border-radius: 0 15px 15px 0;
+    background-color: #0065FC;
+    color: white;
+    border: none;
+}
+
+.localisation, .boutton {
+    margin: auto;
+    height: 49px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
@@ -151,8 +194,7 @@ a {
     margin-bottom: 5px;
 }
 
-
-
+ 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
