@@ -29,7 +29,7 @@ nav {
 
 .menu a:hover {
     color: #0065FC;
-    border-top: 1px #0065FC solid; 
+    border-top: 2px #0065FC solid; 
 }
 
 .logo {
@@ -83,6 +83,7 @@ a {
 }
 h4 {
     font-size: 18px;
+    margin: 0;
 }
 
 /****** Infogroup ***********/
@@ -144,11 +145,6 @@ h4 {
     margin-bottom: 20px;
 }
 
-h3 {
-    font-size: 18px;
-    margin: 0;
-}
-
 .thematique {
     display: flex;
     flex-wrap: wrap;
@@ -193,6 +189,7 @@ h3 {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 .hebergements-and-populaires section {
@@ -204,9 +201,6 @@ h3 {
 
 /****** Hebergements ***********/
 .hebergements {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: 65%;
 }
 
@@ -215,10 +209,17 @@ h3 {
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     gap: 30px;
+    margin-top: 33px;
+    margin-bottom: 33px;
+}
+.hebergements-cards .card {
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .hebergements-cards .card-content {
     padding-left: 15px;
+    box-sizing: border-box;
 }
 
 .hebergements-cards img {
@@ -226,6 +227,7 @@ h3 {
     height: 124px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    box-sizing: border-box;
  }
 
 .hebergements-cards .card-title {
@@ -233,7 +235,7 @@ h3 {
     margin-bottom: 5px;
 }
 .hebergements-cards .card-rating {
-    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 /****** Populaires ***********/
@@ -283,6 +285,44 @@ h3 {
     margin-bottom: 5px;
 }
 
+/************** Activités à Marseille ***************/
+
+.activites {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+    
+}
+.activites-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    
+
+}
+
+.activites-card .card {
+    padding: 0;
+    height: 100%;
+
+}
+
+.activites-card img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 380px;
+
+}
+
+.activites-card .card-title {
+ padding: 15px;
+ margin: 0;
+}
  
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
