@@ -323,7 +323,28 @@ h4 {
  padding: 15px;
  margin: 0;
 }
- 
+
+/************** Le footer ***************/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-bg-color);
+    padding: 30px 20px;
+}
+
+.infopied {
+    width: 33%;
+}
+
+.listepied {
+    list-style-type: none;
+    padding: 0;
+}
+
+.listepied li {
+    margin-bottom: 15px;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
