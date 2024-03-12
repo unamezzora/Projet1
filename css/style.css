@@ -1,7 +1,12 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+}
 
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
 }
 
 :root {
@@ -16,15 +21,21 @@
 
 nav {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 35px;
+    height: 79px;
+    margin-bottom: 30px;
+}
+
+.menu {
+    display: flex;
+    height: 100%;
+    gap: 68px;
+    box-sizing: border-box;
 }
 
 .menu a {
-    margin-left: 50px;
-    padding-top: 14px;
+    padding-top: 16px;
 }
 
 .menu a:hover {
@@ -36,15 +47,10 @@ nav {
     height: 19px
 }
 
-
-body {
-    display: flex;
-    justify-content: center;
-}
-
 .main-container {
     width: 100%;
     max-width: 1440px;
+    min-width: 320px;
     padding: 0 50px;
     box-sizing: border-box;
 }
@@ -87,24 +93,36 @@ h4 {
 }
 
 /****** Infogroup ***********/
+.infogroup {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-bottom: 35px;
+}
 .slogan {
-    margin-top: 50px;
-    margin-bottom: 30px;
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.slogan p, .infogroup p {
+    margin: 0;
 }
 
 /****** Un formulaire de recherche ***********/
 .formulaire-recherche {
     display: flex;
-    margin-bottom: 35px;
+    justify-content: space-between;
     width: 377px;
+    height: 49px;
 }
 
 .icon {
+    height: 49px;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 49px;
-    width: 50px;
     background-color: #F2F2F2;
     border-radius: 15px 0 0 15px;
 }
@@ -117,23 +135,34 @@ h4 {
     width: 195px;
     border-color: #F2F2F2 transparent #F2F2F2 transparent;
     font-weight: bold;
-    padding-left: 10px;
+    padding: 0 0 0 10px;
     border-style: solid;
+    height: 49px;
+
 }
 
-.boutton {
+.boutton_mot {
     width: 132px;
     border-radius: 0 15px 15px 0;
     background-color: #0065FC;
     color: white;
     border: none;
+    padding: 0;
+
 }
 
-.localisation, .boutton {
+.localisation, .boutton_mot {
     margin: auto;
     height: 49px;
     font-size: 18px;
     font-weight: bold;
+}
+
+.boutton_loupe {
+    background-color: #0065FC;
+    border-radius: 15px;
+    width: 49px;
+    display: none;
 }
 
 /************** Les filtres ***************/
@@ -142,7 +171,6 @@ h4 {
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 .thematique {
@@ -172,6 +200,7 @@ h4 {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    box-sizing: border-box;
     width: 24px;
     height: 24px;
     border: 1px solid #d9d9d9;
@@ -179,6 +208,7 @@ h4 {
  .textinfo {
     display: flex;
     align-items: center;
+
     gap: 10px;
  }
 
@@ -212,6 +242,7 @@ h4 {
     margin-top: 33px;
     margin-bottom: 33px;
 }
+
 .hebergements-cards .card {
     height: 100%;
     box-sizing: border-box;
@@ -234,6 +265,7 @@ h4 {
     margin-top: 4px;
     margin-bottom: 5px;
 }
+
 .hebergements-cards .card-rating {
     margin-top: 5px;
 }
@@ -308,7 +340,6 @@ h4 {
 .activites-card .card {
     padding: 0;
     height: 100%;
-
 }
 
 .activites-card img {
@@ -320,8 +351,8 @@ h4 {
 }
 
 .activites-card .card-title {
- padding: 15px;
- margin: 0;
+    padding: 20px 19px;
+    margin: 0;
 }
 
 /************** Le footer ***************/
@@ -330,7 +361,8 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: var(--main-bg-color);
-    padding: 30px 20px;
+    padding: 20px 20px;
+    margin-top: 35px;
 }
 
 .infopied {
@@ -340,10 +372,11 @@ footer {
 .listepied {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 .listepied li {
-    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -351,6 +384,13 @@ footer {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .main-container {
+        padding: 0;
+    }
+
+    .infogroup, nav {
+        padding: 0 20px 0 20px;
+    }
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -381,9 +421,131 @@ footer {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activites-card img {
+        height: 200px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    nav {
+        flex-direction: column;
+        height: 115px;
+    }
+
+    .logo {
+        padding: 30px 0 30px 0;
+    }
+
+    .menu {
+        width: 100%;
+        gap: 0;
+        height: 36px;
+    }
+
+    .menu a:hover {
+        border-bottom: 2px #0065FC solid; 
+        border-top: none;
+    }
+
+    .menu a {
+        width: 50%;
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .boutton_mot {
+        display: none;
+    }
+
+    .boutton_loupe {
+        background-color: #0065FC;
+        border-radius: 15px;
+        width: 49px;
+        height: 49px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        border: none;
+        box-shadow:0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        position: absolute;
+        right: 10px;
+    }
+
+    .formulaire-recherche {
+        width: 96%;
+
+    }
+
+    .localisation {
+        width: 100%;
+
+
+
+        }
+
+    .choix {
+        font-size: 14px;
+        height: 50px;
+        box-sizing: border-box;
+    }
+
+    .filtre {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .thematique {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 50px;
+        width: 100%;
+    }
+    
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+
+    .populaires-cards {
+        flex-direction: column;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+
+    .populaires-cards .card {
+        margin-top: 15px;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0;
+        padding: 20px;
+    }
+    
+    .hebergements-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    #heberg {
+        background-color: #ffffff;
+    }
+
+    .activites-card {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .infopied {
+        width: 100%;
+    }
 }

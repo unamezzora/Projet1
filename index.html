@@ -20,8 +20,8 @@
             <nav>
                 <img class="logo" src="images/logo/Booki.png" alt="Logo Booki">
                 <div class="menu">
-                    <a href="#">Hébergements</a>
-                    <a href="#">Activités</a>
+                    <a href="#heberg">Hébergements</a>
+                    <a href="#activ">Activités</a>
                 </div>        
             </nav>
         </header>
@@ -33,11 +33,12 @@
                 </div>
                 <form method="get" action="">
                     <div class="formulaire-recherche">
-                        <div class="icon">
+                        <label for="local_recherche" class="icon">
                             <i class="fa-solid fa-location-dot fa-lg" ></i>
-                        </div>
-                        <input type="search" name="local" value="Marseille, France" class="localisation">
-                        <input type="submit" value="Rechercher" class="boutton">
+                        </label>
+                        <input type="search" id="local_recherch" name="local" value="Marseille, France" class="localisation">
+                        <button class="boutton_mot">Rechercher</button>
+                        <button class="boutton_loupe"><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i></button>
                     </div>
                 </form>
                 <div class="filtre">
@@ -69,7 +70,7 @@
                 </div>    
             </div>
             <div class="hebergements-and-populaires">
-                <section class="hebergements">
+                <section class="hebergements" id="heberg">
                     <h2 class="section-title">Hébergements à Marseille</h2>
                     <div class="hebergements-cards">
                         <a href="#">
@@ -256,7 +257,7 @@
                     </div>
                 </section>
             </div>
-            <div class="activites">
+            <div class="activites" id="activ">
                 <h2 class="section-title">Activités à Marseille</h2>
                 <div class="activites-card">
                     <a href="#">
@@ -267,19 +268,19 @@
                     </a>
                     <a href="#">
                         <article class="card">
-                            <img src="./images/activites/paul-hermann.jpg" alt="Un Port - Marseille">
+                            <img src="./images/activites/paul-hermann.jpg" alt="Le Fort de l'île de Pomègues - Marseille">
                             <h3 class="card-title">Fort de Pomègues</h3>
                         </article>
                     </a>
                     <a href="#">
                         <article class="card">
-                            <img src="./images/activites/kilyan-sockalingum.jpg" alt="Un Port - Marseille">
+                            <img src="./images/activites/kilyan-sockalingum.jpg" alt="Les Calanques de Marseille">
                             <h3 class="card-title">Parc national des Calanques</h3>
                         </article>
                     </a>
                     <a href="#">
                         <article class="card">
-                            <img src="./images/activites/florian-wehde.jpg" alt="Un Port - Marseille">
+                            <img src="./images/activites/florian-wehde.jpg" alt="La basilique">
                             <h3 class="card-title">Notre-Dame-de-la-Garde</h3>
                         </article>
                     </a>
@@ -288,7 +289,7 @@
         </main>
         <footer>
             <div class="infopied">
-                <h4>À propos</h4>
+                <h4><a href="#">À propos</a></h4>
                 <ul class="listepied">
                     <li><a href="#">Fonctionnement du site</a></li>
                     <li><a href="#">Conditions générales</a></li>
@@ -296,14 +297,14 @@
                 </ul>
             </div>
             <div class="infopied">
-                <h4>Nos hébergements</h4>
+                <h4><a href="#">Nos hébergements</a></h4>
                 <ul class="listepied">
                     <li><a href="#">Charte qualité</a></li>
                     <li><a href="#">Proposer votre hôtel</a></li>
                 </ul>
             </div>
             <div class="infopied">
-                <h4>Assistance</h4>
+                <h4><a href="#">Assistance</a></h4>
                 <ul class="listepied">
                     <li><a href="#">Centre d’aide</a></li>
                     <li><a href="#">Nous contacter</a></li>
